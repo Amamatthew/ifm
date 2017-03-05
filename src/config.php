@@ -41,7 +41,14 @@ class IFMConfig {
 
 	// general config
 	const auth = 0;
-	const auth_source = 'inline;admin:$2y$10$0Bnm5L4wKFHRxJgNq.oZv.v7yXhkJZQvinJYR2p6X1zPvzyDRUVRC';
+	/* LDAP AUTH syntax
+	 *
+	 *  const auth_source = 'ldap;<ldap_sever_host>:<rootdn>';
+	 *
+	 *  The script will add "uid=<username>," to the rootdn for binding. If your ldap server
+	 *  does not use uid for usernames you can change it in the function checkCredentials.
+	 *
+	 */
 	const defaulttimezone = "Europe/Berlin"; // set default timezone
 
 	// development tools
